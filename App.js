@@ -28,7 +28,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: SettingsScreen,
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => (
-          <Icon name="search" size={30} color={focused ? "tomato" : "gray"} />
+          <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
         )
       }
     }

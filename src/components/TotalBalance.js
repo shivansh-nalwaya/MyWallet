@@ -18,7 +18,6 @@ export default class TotalBalance extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: "green",
     padding: 40
   },
   heading: {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, StatusBar } from "react-native";
 import TotalBalance from "./components/TotalBalance";
 import AccountList from "./components/AccountList";
+import RecentTransactions from "./components/RecentTransactions";
 
 export default class Home extends Component {
   render() {
@@ -9,11 +10,12 @@ export default class Home extends Component {
       <View style={styles.container}>
         <StatusBar backgroundColor="#262838" barStyle="light-content" />
         <View style={styles.header}>
-          <Text style={styles.heading}>Dashboard</Text>
+          <Text style={styles.heading}>Home</Text>
         </View>
         <View style={styles.body}>
           <TotalBalance />
           <AccountList />
+          <RecentTransactions />
         </View>
       </View>
     );

@@ -15,7 +15,7 @@ export default class AccountList extends Component {
               }}
             />
             <Text style={styles.accountName}>SBI</Text>
-            <Text style={styles.accountBalance}>₹ 10,000</Text>
+            <Text style={styles.accountBalance}>10,000 ₹</Text>
           </View>
           <View style={styles.listItem}>
             <Image
@@ -25,7 +25,18 @@ export default class AccountList extends Component {
               }}
             />
             <Text style={styles.accountName}>Kotak</Text>
-            <Text style={styles.accountBalance}>₹ 10,000</Text>
+            <Text style={styles.accountBalance}>10,000 ₹</Text>
+          </View>
+          <View style={styles.listItem}>
+            <Image
+              style={{ width: 200, height: 50, marginVertical: 15 }}
+              source={{
+                uri:
+                  "https://i0.wp.com/www.noticebard.com/wp-content/uploads/2018/02/paytm-customer-care-internship-Delhi.png"
+              }}
+            />
+            <Text style={styles.accountName}>Paytm</Text>
+            <Text style={styles.accountBalance}>500 ₹</Text>
           </View>
         </ScrollView>
       </View>
