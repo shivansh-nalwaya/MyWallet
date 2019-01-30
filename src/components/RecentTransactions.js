@@ -24,6 +24,15 @@ export default class RecentTransactions extends Component {
         <View style={styles.item}>
           <View>
             <Text style={styles.entry}>
+              SBI <Icon name="arrow-right" size={10} /> Paytm
+            </Text>
+            <Text style={styles.date}>1st Jan, 2018</Text>
+          </View>
+          <Text style={styles.transferEntry}>500 ₹</Text>
+        </View>
+        <View style={styles.item}>
+          <View>
+            <Text style={styles.entry}>
               SBI <Icon name="arrow-right" size={10} /> Kotak
             </Text>
             <Text style={styles.date}>1st Jan, 2018</Text>

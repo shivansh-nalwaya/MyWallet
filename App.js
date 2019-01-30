@@ -24,11 +24,31 @@ const TabNavigator = createBottomTabNavigator(
         )
       }
     },
+    Stats: {
+      screen: SettingsScreen,
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => (
+          <Icon
+            name="bar-chart"
+            size={30}
+            color={focused ? "tomato" : "gray"}
+          />
+        )
+      }
+    },
     Settings: {
       screen: SettingsScreen,
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => (
           <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
+        )
+      }
+    },
+    Add: {
+      screen: SettingsScreen,
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => (
+          <Icon name="plus" size={30} color={focused ? "tomato" : "gray"} />
         )
       }
     }
@@ -40,11 +60,15 @@ const TabNavigator = createBottomTabNavigator(
       inactiveTintColor: "gray",
       style: {
         borderTopWidth: 0,
-        height: 70
+        paddingTop: 10,
+        height: 60,
+        backgroundColor: "#262838"
+      },
+      labelStyle: {
+        marginTop: 10
       },
       tabStyle: {
-        paddingVertical: 10,
-        backgroundColor: "#262838"
+        paddingVertical: 5
       }
     }
   }
