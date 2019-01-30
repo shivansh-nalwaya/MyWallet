@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ScrollView, View, Text, StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/dist/FontAwesome";
 
 export default class RecentTransactions extends Component {
   render() {
@@ -11,21 +12,23 @@ export default class RecentTransactions extends Component {
             <Text style={styles.entry}>Paytm - Chai</Text>
             <Text style={styles.date}>1st Jan, 2018</Text>
           </View>
-          <Text style={styles.minusEntry}> - ₹ 15</Text>
+          <Text style={styles.minusEntry}> - 15 ₹</Text>
         </View>
         <View style={styles.item}>
           <View>
             <Text style={styles.entry}>SBI - Salary</Text>
             <Text style={styles.date}>1st Jan, 2018</Text>
           </View>
-          <Text style={styles.addEntry}> + ₹ 10,000</Text>
+          <Text style={styles.addEntry}> + 10,000 ₹</Text>
         </View>
         <View style={styles.item}>
           <View>
-            <Text style={styles.entry}>SBI -> Kotak</Text>
+            <Text style={styles.entry}>
+              SBI <Icon name="arrow-right" size={10} /> Kotak
+            </Text>
             <Text style={styles.date}>1st Jan, 2018</Text>
           </View>
-          <Text style={styles.transferEntry}> = ₹ 10,000</Text>
+          <Text style={styles.transferEntry}>10,000 ₹</Text>
         </View>
       </ScrollView>
     );
