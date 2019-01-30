@@ -7,7 +7,7 @@ export default class PieChartView extends React.Component {
     super(props);
     this.state = {
       selectedSlice: {
-        label: "Home Allowance",
+        label: "Rent",
         value: 55
       },
       labelWidth: 0
@@ -16,9 +16,9 @@ export default class PieChartView extends React.Component {
   render() {
     const { labelWidth, selectedSlice } = this.state;
     const { label, value } = selectedSlice;
-    const keys = ["Home Allowance", "Travel", "Grocery", "Food", "Others"];
+    const keys = ["Rent", "Travel", "Grocery", "Food", "Others"];
     const values = [55, 45, 35, 25, 15];
-    const colors = ["#600080", "#9900cc", "#c61aff", "#d966ff", "#ecb3ff"];
+    const colors = ["#e02200", "#ff4625", "#ff8069", "#ffab9c", "#ffd6cf"];
     const data = keys.map((key, index) => {
       return {
         key,
