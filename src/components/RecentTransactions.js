@@ -1,21 +1,33 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
 
 export default class RecentTransactions extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.heading}>Recent Transactions</Text>
-        <Text style={styles.entry}>
-          SBI - <Text style={styles.minusEntry}> - ₹ 150</Text>
-        </Text>
-        <Text style={styles.entry}>
-          SBI - <Text style={styles.addEntry}> + ₹ 15,000</Text>
-        </Text>
-        <Text style={styles.entry}>
-          Paytm - <Text style={styles.addEntry}> + ₹ 15</Text>
-        </Text>
-      </View>
+        <View style={styles.item}>
+          <View>
+            <Text style={styles.entry}>Paytm - Chai</Text>
+            <Text style={styles.date}>1st Jan, 2018</Text>
+          </View>
+          <Text style={styles.minusEntry}> - ₹ 15</Text>
+        </View>
+        <View style={styles.item}>
+          <View>
+            <Text style={styles.entry}>SBI - Salary</Text>
+            <Text style={styles.date}>1st Jan, 2018</Text>
+          </View>
+          <Text style={styles.addEntry}> + ₹ 10,000</Text>
+        </View>
+        <View style={styles.item}>
+          <View>
+            <Text style={styles.entry}>SBI -> Kotak</Text>
+            <Text style={styles.date}>1st Jan, 2018</Text>
+          </View>
+          <Text style={styles.transferEntry}> = ₹ 10,000</Text>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -29,15 +41,30 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingBottom: 10
   },
-  entry: {
-    color: "white",
-    fontSize: 16,
+  item: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     marginVertical: 10
   },
+  entry: {
+    color: "white",
+    fontSize: 18
+  },
+  date: {
+    color: "white",
+    fontSize: 14
+  },
   addEntry: {
-    color: "green"
+    color: "green",
+    fontSize: 20
   },
   minusEntry: {
-    color: "red"
+    color: "red",
+    fontSize: 20
+  },
+  transferEntry: {
+    color: "lightblue",
+    fontSize: 20
   }
 });

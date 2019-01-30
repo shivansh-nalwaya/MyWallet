@@ -46,7 +46,8 @@ export default class AccountList extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row"
+    flexDirection: "row",
+    marginVertical: 10
   },
   listItem: {
     alignItems: "center",
