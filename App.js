@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import Home from "./src/Home";
+import Stats from "./src/Stats";
 
 class SettingsScreen extends React.Component {
   render() {
@@ -25,7 +26,7 @@ const TabNavigator = createBottomTabNavigator(
       }
     },
     Stats: {
-      screen: SettingsScreen,
+      screen: Stats,
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => (
           <Icon
