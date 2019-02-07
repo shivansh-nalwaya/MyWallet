@@ -19,7 +19,8 @@ export default class TotalBalance extends Component {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 40,
-    marginVertical: 20
+    marginVertical: 20,
+    alignItems: "center"
   },
   heading: {
     color: "#ababab",
