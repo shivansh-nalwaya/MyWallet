@@ -4,16 +4,7 @@ import Icon from "react-native-vector-icons/dist/FontAwesome";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import Home from "./src/Home";
 import Stats from "./src/Stats";
-
-class SettingsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Settings!</Text>
-      </View>
-    );
-  }
-}
+import Settings from "./src/Settings";
 
 const TabNavigator = createBottomTabNavigator(
   {
@@ -38,7 +29,7 @@ const TabNavigator = createBottomTabNavigator(
       }
     },
     Settings: {
-      screen: SettingsScreen,
+      screen: Settings,
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => (
           <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
@@ -46,7 +37,7 @@ const TabNavigator = createBottomTabNavigator(
       }
     },
     Add: {
-      screen: SettingsScreen,
+      screen: Home,
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => (
           <Icon name="plus" size={30} color={focused ? "tomato" : "gray"} />
