@@ -10,7 +10,7 @@ export default class Home extends Component {
       <View style={styles.container}>
         <StatusBar backgroundColor="#262838" barStyle="light-content" />
         <View style={styles.header}>
-          <Text style={styles.heading}>Home</Text>
+          <Text style={styles.heading}>Wallet</Text>
         </View>
         <View style={styles.body}>
           <TotalBalance />
@@ -31,18 +31,17 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 1,
-    backgroundColor: "#262838",
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "center",
     paddingHorizontal: 30,
     fontFamily: "lucida grande"
   },
   body: {
-    flex: 6,
+    flex: 14,
     alignItems: "stretch"
   },
   heading: {
     color: "white",
-    fontSize: 30
+    fontSize: 20
   }
 });
