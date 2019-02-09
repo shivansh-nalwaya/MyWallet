@@ -34,14 +34,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 30,
-    fontFamily: "lucida grande"
+    backgroundColor: "#262838"
   },
   body: {
-    flex: 14,
+    flex: 10,
     alignItems: "stretch"
   },
   heading: {
     color: "white",
-    fontSize: 20
+    fontSize: 24
   }
 });
