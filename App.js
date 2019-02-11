@@ -4,18 +4,17 @@ import Icon from "react-native-vector-icons/dist/FontAwesome";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import Home from "./src/Home";
 import Stats from "./src/Stats";
-import Settings from "./src/Settings";
+
+const SettingsScreen = () => {
+  return (
+    <View>
+      <Text>Settings</Text>
+    </View>
+  );
+};
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Settings: {
-      screen: Settings,
-      navigationOptions: {
-        tabBarIcon: ({ focused, tintColor }) => (
-          <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
-        )
-      }
-    },
     Home: {
       screen: Home,
       navigationOptions: {
@@ -33,6 +32,14 @@ const TabNavigator = createBottomTabNavigator(
             size={30}
             color={focused ? "tomato" : "gray"}
           />
+        )
+      }
+    },
+    Settings: {
+      screen: SettingsScreen,
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => (
+          <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
         )
       }
     },
