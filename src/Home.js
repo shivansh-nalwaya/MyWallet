@@ -8,16 +8,20 @@ import CardEntry from "./components/CardEntry";
 
 const ENTRIES = [
   {
-    title: "SBI"
+    title: "SBI",
+    color: "blue",
+    number: "1 2 3 4   1 2 3 4   1 2 3 4",
+    type: "mastercard"
   },
   {
-    title: "Kotak"
+    title: "Kotak",
+    color: "red",
+    number: "1 2 3 4   1 2 3 4   1 2 3 4"
   },
   {
-    title: "Paytm"
-  },
-  {
-    title: "GPay"
+    title: "Paytm",
+    color: "lightgray",
+    number: "1 2 3 4   1 2 3 4   1 2 3 4"
   }
 ];
 const SLIDER_1_FIRST_ITEM = 0;
