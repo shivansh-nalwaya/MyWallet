@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { sliderWidth, itemWidth } from "../styles/SliderEntry.style";
 
 export default class CardEntry extends Component {
   render() {
@@ -21,8 +22,8 @@ export default class CardEntry extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: 300,
-    height: 160,
+    width: itemWidth,
+    height: 180,
     backgroundColor: "white",
     borderRadius: 10
   }

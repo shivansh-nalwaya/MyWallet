@@ -50,12 +50,10 @@ export default class Home extends Component {
         <View style={styles.body}>
           <TotalBalance />
           <Carousel
-            ref={c => (this._slider1Ref = c)}
             data={ENTRIES}
             renderItem={this._renderItemWithParallax}
             sliderWidth={sliderWidth}
             itemWidth={itemWidth}
-            hasParallaxImages={true}
             firstItem={SLIDER_1_FIRST_ITEM}
             inactiveSlideScale={0.94}
             inactiveSlideOpacity={0.7}
@@ -87,7 +85,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#262838"
   },
   body: {
-    flex: 10,
+    flex: 14,
     alignItems: "stretch"
   },
   heading: {
