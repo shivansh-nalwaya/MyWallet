@@ -2,39 +2,21 @@ import React, { Component } from "react";
 import { View, SafeAreaView } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import { sliderWidth, itemWidth } from "./styles/SliderEntry.style";
-import SliderEntry from "./components/SliderEntry";
+import CardEntry from "./components/CardEntry";
 import styles from "./styles/index.style";
 
 const ENTRIES = [
   {
-    title: "Beautiful and dramatic Antelope Canyon",
-    subtitle: "Lorem ipsum dolor sit amet et nuncat mergitur",
-    illustration: "https://i.imgur.com/UYiroysl.jpg"
+    title: "SBI"
   },
   {
-    title: "Earlier this morning, NYC",
-    subtitle: "Lorem ipsum dolor sit amet",
-    illustration: "https://i.imgur.com/UPrs1EWl.jpg"
+    title: "Kotak"
   },
   {
-    title: "White Pocket Sunset",
-    subtitle: "Lorem ipsum dolor sit amet et nuncat ",
-    illustration: "https://i.imgur.com/MABUbpDl.jpg"
+    title: "Paytm"
   },
   {
-    title: "Acrocorinth, Greece",
-    subtitle: "Lorem ipsum dolor sit amet et nuncat mergitur",
-    illustration: "https://i.imgur.com/KZsmUi2l.jpg"
-  },
-  {
-    title: "The lone tree, majestic landscape of New Zealand",
-    subtitle: "Lorem ipsum dolor sit amet",
-    illustration: "https://i.imgur.com/2nCt3Sbl.jpg"
-  },
-  {
-    title: "Middle Earth, Germany",
-    subtitle: "Lorem ipsum dolor sit amet",
-    illustration: "https://i.imgur.com/lceHsT6l.jpg"
+    title: "GPay"
   }
 ];
 
@@ -50,7 +32,7 @@ export default class example extends Component {
 
   _renderItemWithParallax({ item, index }, parallaxProps) {
     return (
-      <SliderEntry
+      <CardEntry
         data={item}
         even={(index + 1) % 2 === 0}
         parallax={true}

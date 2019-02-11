@@ -8,6 +8,14 @@ import Settings from "./src/Settings";
 
 const TabNavigator = createBottomTabNavigator(
   {
+    Settings: {
+      screen: Settings,
+      navigationOptions: {
+        tabBarIcon: ({ focused, tintColor }) => (
+          <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
+        )
+      }
+    },
     Home: {
       screen: Home,
       navigationOptions: {
@@ -25,14 +33,6 @@ const TabNavigator = createBottomTabNavigator(
             size={30}
             color={focused ? "tomato" : "gray"}
           />
-        )
-      }
-    },
-    Settings: {
-      screen: Settings,
-      navigationOptions: {
-        tabBarIcon: ({ focused, tintColor }) => (
-          <Icon name="gear" size={30} color={focused ? "tomato" : "gray"} />
         )
       }
     },
