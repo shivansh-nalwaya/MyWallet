@@ -16,12 +16,14 @@ const ENTRIES = [
   {
     title: "Kotak",
     color: "red",
-    number: "1 2 3 4   1 2 3 4   1 2 3 4"
+    number: "1 2 3 4   1 2 3 4   1 2 3 4",
+    type: "visa"
   },
   {
     title: "Paytm",
     color: "lightgray",
-    number: "1 2 3 4   1 2 3 4   1 2 3 4"
+    number: "1 2 3 4   1 2 3 4   1 2 3 4",
+    type: "rupay"
   }
 ];
 const SLIDER_1_FIRST_ITEM = 0;

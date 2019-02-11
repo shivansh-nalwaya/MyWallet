@@ -2,6 +2,27 @@ import React, { Component } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { itemWidth } from "../styles/SliderEntry.style";
 
+const CardHeader = props => {
+  if (props.type == "mastercard") {
+    dimensions = { width: 74, height: 57 };
+    uri =
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png";
+  } else if (props.type == "visa") {
+    dimensions = { width: 68, height: 23 };
+    uri =
+      "https://www.schoolofpublicpolicy.visa.com/media/1001/visalogo_white.png";
+  } else {
+    dimensions = { width: 68, height: 23 };
+    uri = "https://image3.mouthshut.com/images/imagesp/925840065s.png";
+  }
+  return (
+    <View style={styles.header}>
+      <Text style={styles.title}>{props.title}</Text>
+      <Image style={dimensions} source={{ uri }} />
+    </View>
+  );
+};
+
 export default class CardEntry extends Component {
   render() {
     const { title, color, number, type } = this.props.data;
@@ -13,27 +34,7 @@ export default class CardEntry extends Component {
         }}
       >
         <View style={{ ...styles.container, backgroundColor: color }}>
-          <View style={styles.header}>
-            <Text style={styles.title}>{title}</Text>
-            <Image
-              style={
-                type == "mastercard"
-                  ? { width: 74, height: 57 }
-                  : { width: 68, height: 23 }
-              }
-              source={
-                type == "mastercard"
-                  ? {
-                      uri:
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png"
-                    }
-                  : {
-                      uri:
-                        "https://www.schoolofpublicpolicy.visa.com/media/1001/visalogo_white.png"
-                    }
-              }
-            />
-          </View>
+          <CardHeader {...this.props.data} />
           <Text style={styles.number}>{number}</Text>
           <View style={styles.footer}>
             <Text style={{ color: "white" }}>SHIVANSH NALWAYA</Text>
