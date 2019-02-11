@@ -1,13 +1,44 @@
 import React, { Component } from "react";
 import { View, SafeAreaView } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
 import Carousel from "react-native-snap-carousel";
 import { sliderWidth, itemWidth } from "./styles/SliderEntry.style";
 import SliderEntry from "./components/SliderEntry";
-import styles, { colors } from "./styles/index.style";
-import { ENTRIES1 } from "./static/entries";
+import styles from "./styles/index.style";
 
-const SLIDER_1_FIRST_ITEM = 1;
+const ENTRIES = [
+  {
+    title: "Beautiful and dramatic Antelope Canyon",
+    subtitle: "Lorem ipsum dolor sit amet et nuncat mergitur",
+    illustration: "https://i.imgur.com/UYiroysl.jpg"
+  },
+  {
+    title: "Earlier this morning, NYC",
+    subtitle: "Lorem ipsum dolor sit amet",
+    illustration: "https://i.imgur.com/UPrs1EWl.jpg"
+  },
+  {
+    title: "White Pocket Sunset",
+    subtitle: "Lorem ipsum dolor sit amet et nuncat ",
+    illustration: "https://i.imgur.com/MABUbpDl.jpg"
+  },
+  {
+    title: "Acrocorinth, Greece",
+    subtitle: "Lorem ipsum dolor sit amet et nuncat mergitur",
+    illustration: "https://i.imgur.com/KZsmUi2l.jpg"
+  },
+  {
+    title: "The lone tree, majestic landscape of New Zealand",
+    subtitle: "Lorem ipsum dolor sit amet",
+    illustration: "https://i.imgur.com/2nCt3Sbl.jpg"
+  },
+  {
+    title: "Middle Earth, Germany",
+    subtitle: "Lorem ipsum dolor sit amet",
+    illustration: "https://i.imgur.com/lceHsT6l.jpg"
+  }
+];
+
+const SLIDER_1_FIRST_ITEM = 0;
 
 export default class example extends Component {
   constructor(props) {
@@ -28,31 +59,14 @@ export default class example extends Component {
     );
   }
 
-  get gradient() {
-    return (
-      <LinearGradient
-        colors={[colors.background1, colors.background2]}
-        startPoint={{ x: 1, y: 0 }}
-        endPoint={{ x: 0, y: 1 }}
-        style={styles.gradient}
-      />
-    );
-  }
-
   render() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
-          <LinearGradient
-            colors={[colors.background1, colors.background2]}
-            startPoint={{ x: 1, y: 0 }}
-            endPoint={{ x: 0, y: 1 }}
-            style={styles.gradient}
-          />
           <View style={styles.exampleContainer}>
             <Carousel
               ref={c => (this._slider1Ref = c)}
-              data={ENTRIES1}
+              data={ENTRIES}
               renderItem={this._renderItemWithParallax}
               sliderWidth={sliderWidth}
               itemWidth={itemWidth}
