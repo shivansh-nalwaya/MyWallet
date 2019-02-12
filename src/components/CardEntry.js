@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { itemWidth } from "../styles/SliderEntry.style";
+import LinearGradient from "react-native-linear-gradient";
 
 const CardHeader = props => {
   if (props.type == "mastercard") {
@@ -12,7 +13,7 @@ const CardHeader = props => {
     uri =
       "https://www.schoolofpublicpolicy.visa.com/media/1001/visalogo_white.png";
   } else {
-    dimensions = { width: 68, height: 23 };
+    dimensions = { width: 81, height: 27 };
     uri = "https://image3.mouthshut.com/images/imagesp/925840065s.png";
   }
   return (
@@ -25,23 +26,21 @@ const CardHeader = props => {
 
 export default class CardEntry extends Component {
   render() {
-    const { title, color, number, type } = this.props.data;
+    const { theme, theme2, number } = this.props.data;
     return (
-      <TouchableOpacity
-        activeOpacity={1}
-        onPress={() => {
-          alert("You've clicked");
-        }}
-      >
-        <View style={{ ...styles.container, backgroundColor: color }}>
+      <View style={styles.container}>
+        <LinearGradient
+          colors={[theme, theme2]}
+          style={{ ...styles.container, paddingHorizontal: 20 }}
+        >
           <CardHeader {...this.props.data} />
           <Text style={styles.number}>{number}</Text>
           <View style={styles.footer}>
             <Text style={{ color: "white" }}>SHIVANSH NALWAYA</Text>
             <Text style={{ color: "white" }}>05/22</Text>
           </View>
-        </View>
-      </TouchableOpacity>
+        </LinearGradient>
+      </View>
     );
   }
 }
@@ -50,8 +49,7 @@ const styles = StyleSheet.create({
   container: {
     width: itemWidth,
     height: 180,
-    borderRadius: 10,
-    paddingHorizontal: 20
+    borderRadius: 10
   },
   title: {
     flex: 5,

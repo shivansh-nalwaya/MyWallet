@@ -9,42 +9,30 @@ import CardEntry from "./components/CardEntry";
 const ENTRIES = [
   {
     title: "SBI",
-    color: "blue",
+    theme: "#103ABB",
+    theme2: "#103A65",
     number: "1 2 3 4   1 2 3 4   1 2 3 4",
     type: "mastercard"
   },
   {
     title: "Kotak",
-    color: "red",
+    theme: "#FE0000",
+    theme2: "#9A0000",
     number: "1 2 3 4   1 2 3 4   1 2 3 4",
     type: "visa"
   },
   {
     title: "Paytm",
-    color: "lightgray",
+    theme: "#00B3D3",
+    theme2: "#00B3F5",
     number: "1 2 3 4   1 2 3 4   1 2 3 4",
     type: "rupay"
   }
 ];
-const SLIDER_1_FIRST_ITEM = 0;
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      slider1ActiveSlide: SLIDER_1_FIRST_ITEM
-    };
-  }
-
-  _renderItemWithParallax({ item, index }, parallaxProps) {
-    return (
-      <CardEntry
-        data={item}
-        even={(index + 1) % 2 === 0}
-        parallax={true}
-        parallaxProps={parallaxProps}
-      />
-    );
+  _renderCard({ item, index }) {
+    return <CardEntry data={item} key={index} />;
   }
   render() {
     return (
@@ -57,17 +45,15 @@ export default class Home extends Component {
           <TotalBalance />
           <Carousel
             data={ENTRIES}
-            renderItem={this._renderItemWithParallax}
+            renderItem={this._renderCard}
             sliderWidth={sliderWidth}
             itemWidth={itemWidth}
-            firstItem={SLIDER_1_FIRST_ITEM}
             inactiveSlideScale={0.94}
             inactiveSlideOpacity={0.7}
             containerCustomStyle={styles.slider}
             contentContainerCustomStyle={styles.sliderContentContainer}
             loop={false}
             autoplay={false}
-            onSnapToItem={index => this.setState({ slider1ActiveSlide: index })}
           />
           <RecentTransactions />
         </View>
