@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: "#ababab",
-    fontSize: 20,
-    paddingBottom: 10
+    fontSize: 20
   },
   item: {
     flexDirection: "row",
