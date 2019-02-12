@@ -1,3 +1,3 @@
 # Wallet App
 
-[Screen recording][src/assets/sreen.gif]
+![Screen recording](src/assets/screen.gif)
