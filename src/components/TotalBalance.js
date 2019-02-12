@@ -6,7 +6,6 @@ export default class TotalBalance extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.heading}>Total Balance</Text>
-
         <Text style={styles.balance}>
           20,000
           <Text style={styles.currency}> ₹</Text>

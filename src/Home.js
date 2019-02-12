@@ -42,20 +42,26 @@ export default class Home extends Component {
           <Text style={styles.heading}>Wallet</Text>
         </View>
         <View style={styles.body}>
-          <TotalBalance />
-          <Carousel
-            data={ENTRIES}
-            renderItem={this._renderCard}
-            sliderWidth={sliderWidth}
-            itemWidth={itemWidth}
-            inactiveSlideScale={0.94}
-            inactiveSlideOpacity={0.7}
-            containerCustomStyle={styles.slider}
-            contentContainerCustomStyle={styles.sliderContentContainer}
-            loop={false}
-            autoplay={false}
-          />
-          <RecentTransactions />
+          <View style={{ flex: 2 }}>
+            <TotalBalance />
+          </View>
+          <View style={{ flex: 3 }}>
+            <Carousel
+              data={ENTRIES}
+              renderItem={this._renderCard}
+              sliderWidth={sliderWidth}
+              itemWidth={itemWidth}
+              inactiveSlideScale={0.94}
+              inactiveSlideOpacity={0.7}
+              containerCustomStyle={styles.slider}
+              contentContainerCustomStyle={styles.sliderContentContainer}
+              loop={false}
+              autoplay={false}
+            />
+          </View>
+          <View style={{ flex: 4 }}>
+            <RecentTransactions />
+          </View>
         </View>
       </View>
     );
@@ -77,11 +83,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#262838"
   },
   body: {
-    flex: 14,
+    flex: 10,
     alignItems: "stretch"
   },
   heading: {
     color: "white",
-    fontSize: 24
+    fontSize: 20
   }
 });

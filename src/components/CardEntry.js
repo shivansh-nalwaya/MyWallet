@@ -48,7 +48,7 @@ export default class CardEntry extends Component {
 const styles = StyleSheet.create({
   container: {
     width: itemWidth,
-    height: 180,
+    height: 190,
     borderRadius: 10
   },
   title: {
