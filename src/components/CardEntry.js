@@ -5,9 +5,9 @@ import LinearGradient from "react-native-linear-gradient";
 
 const CardHeader = props => {
   if (props.type == "mastercard") {
-    dimensions = { width: 74, height: 57 };
+    dimensions = { width: 82, height: 57 };
     uri =
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png";
+      "https://www.casinorunner.com/wp-content/uploads/2018/06/mastercard-logo-500.png";
   } else if (props.type == "visa") {
     dimensions = { width: 68, height: 23 };
     uri =

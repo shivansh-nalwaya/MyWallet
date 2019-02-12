@@ -78,16 +78,16 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "flex-start",
     paddingHorizontal: 30,
     backgroundColor: "#262838"
   },
   body: {
-    flex: 10,
+    flex: 6,
     alignItems: "stretch"
   },
   heading: {
     color: "white",
-    fontSize: 20
+    fontSize: 30
   }
 });
