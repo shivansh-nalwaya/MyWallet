@@ -5,11 +5,20 @@ export default class TotalBalance extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.heading}>Total Balance</Text>
-        <Text style={styles.balance}>
-          20,000
-          <Text style={styles.currency}> ₹</Text>
-        </Text>
+        <View style={styles.box}>
+          <Text style={styles.heading}>Total Assets</Text>
+          <Text style={styles.balance}>
+            1,22,000
+            <Text style={styles.currency}> ₹</Text>
+          </Text>
+        </View>
+        <View style={styles.box}>
+          <Text style={styles.heading}>Total Balance</Text>
+          <Text style={styles.balance}>
+            74,000
+            <Text style={styles.currency}> ₹</Text>
+          </Text>
+        </View>
       </View>
     );
   }
@@ -17,20 +26,24 @@ export default class TotalBalance extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 40,
-    marginVertical: 20,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    paddingTop: 30
+  },
+  box: {
+    flexDirection: "column",
     alignItems: "center"
   },
   heading: {
     color: "#ababab",
-    fontSize: 20
+    fontSize: 16
   },
   balance: {
     color: "white",
-    fontSize: 50
+    fontSize: 30
   },
   currency: {
     color: "#ababab",
-    fontSize: 50
+    fontSize: 30
   }
 });
