@@ -36,7 +36,7 @@ export default class CardEntry extends Component {
           <CardHeader {...this.props.data} />
           <Text style={styles.number}>{number}</Text>
           <View style={styles.footer}>
-            <Text style={{ color: "white" }}>SHIVANSH NALWAYA</Text>
+            <Text style={{ color: "white" }}>TEST USER</Text>
             <Text style={{ color: "white" }}>05/22</Text>
           </View>
         </LinearGradient>

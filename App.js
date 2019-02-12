@@ -13,6 +13,14 @@ const SettingsScreen = () => {
   );
 };
 
+const AddScreen = () => {
+  return (
+    <View>
+      <Text>Add</Text>
+    </View>
+  );
+};
+
 const TabNavigator = createBottomTabNavigator(
   {
     Home: {
@@ -44,7 +52,7 @@ const TabNavigator = createBottomTabNavigator(
       }
     },
     Add: {
-      screen: Home,
+      screen: AddScreen,
       navigationOptions: {
         tabBarIcon: ({ focused, tintColor }) => (
           <Icon name="plus" size={30} color={focused ? "tomato" : "gray"} />
