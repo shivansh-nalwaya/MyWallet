@@ -1,3 +1,3 @@
 # Wallet App
 
-![Screen recording](src/assets/screen.gif)
+<img src="src/assets/screen.gif" width="250" alt="Screen"/>
